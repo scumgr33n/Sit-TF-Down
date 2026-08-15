@@ -19,7 +19,7 @@ Simply look at one of the chairs **(must be from an in-game catalogue)** and rig
 
 Left shift to stand again.
 
-You can press Z to zoom the camera. 
+You can press Z to toggle-zoom the camera. 
 
 <h1>KNOWN ISSUES</h1>
 
