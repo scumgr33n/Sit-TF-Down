@@ -27,6 +27,12 @@ namespace SitTFDown
         {
             Instance = this;
             LoggerInstance.Msg("Initialized Sit TF Down");
+
+            if (player == null)
+                player = UnityEngine.Object.FindObjectOfType<FirstPersonController>();
+
+            if (player != null)
+                player.holdToZoom = false;
         }
 
         public override void OnUpdate()
@@ -43,7 +49,12 @@ namespace SitTFDown
                 StandUp();
         
             }
-
+            if (player == null)
+            {
+                player = UnityEngine.Object.FindObjectOfType<FirstPersonController>();
+                if (player != null)
+                    player.holdToZoom = false;
+            }
             if (framesUntilRelease > 0)
             {
                 framesUntilRelease--;
